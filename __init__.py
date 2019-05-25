@@ -12,10 +12,10 @@ class AnnounceSkill(MycroftSkill):
     def do_announce(self, message):
         # Remove everything up to the speak keyword and repeat that
         utterance = message.data.get('utterance')
-        repeat = re.sub('^.*?' + message.data['Speak'], '', utterance)
+        repeat = re.sub('^.*?' + message.data['Announce'], '', utterance)
 
         announce_chime = join(abspath(dirname(__file__)),
-                          "sounds/chime.mp3")
+                              "sounds/chime.mp3")
         play_mp3(announce_chime)
 
         self.speak(repeat.strip())
