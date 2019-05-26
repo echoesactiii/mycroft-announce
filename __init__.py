@@ -25,4 +25,4 @@ class AnnounceSkill(MycroftSkill):
 
 
 def create_skill():
-return AnnounceSkill()
+    return AnnounceSkill()
