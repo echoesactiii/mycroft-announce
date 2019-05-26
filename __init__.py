@@ -1,5 +1,5 @@
 import re
-from os.path import dirname, join
+from os.path import dirname, join, abspath
 
 from adapt.intent import IntentBuilder
 from mycroft import MycroftSkill, intent_handler
